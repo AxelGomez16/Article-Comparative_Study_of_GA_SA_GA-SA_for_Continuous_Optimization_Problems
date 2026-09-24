@@ -1,10 +1,107 @@
 \section*{Benchmark Problems}
 
 
-To evaluate the performance of the proposed MA, 
+  To evaluate the performance of GA, SA, GA + SA, \cite{yang2010introduction} suggests a set of
+  problems to test out under different conditions and determine if the performance and efficienct
+  is acceptable. Thus, a set of 3 problems were selected following the use of discrete, continuous
+  and mixed variables, the problems are:
+  \begin{itemize}
+    \item Discrete (Combinatorial): Traveling Salesman Problem (TSP) \cite{bellmore1968traveling}
+    \item Continuous: Rastrigin function problem \cite{rastrigin1974extremal}
+    \item Mixed: Knapsack problem 
+  \end{itemize}
+
+  \subsection*{TSP}  \blindtext
+  \subsection*{Rastrigin Function Problem}
+    The function of Rastrigin is a non-convex, non-linear and multimodal function, being n-dimensional 
+    and denotated at the equation \ref{eq:Rastrigin}.
+  
+    \begin{equation}
+      \label{eq:Rastrigin}
+      f(\mathbf{x}) = An + \sum_{i=1}^{n} \left[ x_i^2 - A\cos(2\pi x_i) \right]
+    \end{equation}
+
+    Where: 
+    \begin{itemize} 
+      \item $f(\mathbf{x})$ is the objective function to minimize 
+      \item $\mathbf{x} = (x_1, x_2, x_3, \ldots, x_n) \in \mathbb{R}^n$ is a vector of variables 
+      \item $A$ is a constant, usually $A = 10$, denoting the amplitude of oscillation 
+      \item $n$ is the dimension of the vector $\mathbf{x}$ 
+      \item $ -5.12 \leq x_i \leq 5.12$ is the commonly used search space. 
+      \item The global minimum is at $\mathbf{x} = (0, 0, 0, \ldots, 0)$ with a value of $f(\mathbf{x}) = 0$ 
+    \end{itemize}
+
+    The Rastrigin function is frequently used to evaluate the performance of optimization
+    algorithms due to its complexity. The quadratic term $x_i^2$ creates a global minimum,
+    while the term $-A\cos(2\pi x_i)$ introduces periodic oscillations with amplitude $A$.
+    When combined with the quadratic term, these produce approximately $10^n$ local minima,
+    determined by the oscillation frequency of the $\cos(2\pi x_i)$ term and the 
+    search space \cite{omeradzic2022progress}.
+
+    Consequently, the Rastrigin function poses a significant challenge in determining 
+    whether an algorithm can identify local minima without becoming trapped in them, 
+    thereby enabling it to locate the global minimum \cite{benhamou2019bcma}.
 
 
-\Blindtext
+  \subsection*{Knapsack Problem} \blindtext
 
-\subsection*{Experimental Setup}
-\blindtext
+
+
+
+
+\section*{Metaheuristic Algorithms}
+
+  The main difference between Classic Algorithms (CA) and Metaheuristic Algorithms (MA) 
+  can be pointed out in quality solution, due to the CA can find an exact and optimal solution, 
+  meanwhile the MA can find an approximate and acceptable solution \cite{almufti2017using}.
+  
+  The results of the set of problems presented in the previous section are following these
+  four criteria:
+
+  \begin{enumerate}
+    \item It does not guarantee the optimal solution, however it would find an acceptable
+      solution and nearly optimal solution in a reasonable time.
+    \item An incorrect architecture of the MA can lead to premature convergence, which 
+      means an incorrect solution and wasted computational time.
+    \item The performacne of any MA is excessive sensible to the configuration of it.
+    \item The computational time of any MA would be higly due to the number of iterations.  
+  \end{enumerate}
+
+  To solve the problems displayed in this article is estrictly necessary to test out diffetent MA,
+  in consecuence of the theorem of \textit{``No Free Lunch''} which means that there is no better
+  MA than another for a particular problem, thus various MA must be tested to find the best MA for 
+  the problem \cite{almufti2022lion}.
+
+  The four categories of MA are:
+
+  \begin{itemize}
+    \item Evolutionary Algorithms (EA): The theory of evolution by Darwin mentions that the 
+      most fit organisms can survive and reproduce, meanwhile the less fit 
+      organisms would extinct \cite{garg2010evolutionary}.
+    
+    \item Physical Processes (PP): The laws of physics and natural phenomena can be used as
+      starting point to solve problems, where the gravity, temperature, radiation, etc. can be 
+      used as inspiration to solve problems \cite{agrawal2021metaheuristic}.
+
+    \item Swarm Intelligence (SI): It based by the nature and the behavior of the animals, 
+      where it tries to mimic the the behaviour of them to achive the supervivence of the scpecies,
+      by way of example, ants, wolfs, bees, birds, etc \cite{almufti2022lion}.
+
+    \item Human Behavior (HB): The way of behave of humans across the society works as inspiration to 
+      develop new MA able to solve complex problems \cite{agrawal2021metaheuristic}
+        
+  \end{itemize}
+
+
+  In this section, the most popular and studied MA are being presented, which are GA,
+  SA and GA + SA.
+
+  \subsection*{Genetic Algorithms} \blindtext
+  \subsection*{Simulated Annealing} \blindtext
+  \subsection*{Genetic Algorithm + Simulated Annealing} \blindtext
+
+
+
+
+\section*{Experimental Setup}
+
