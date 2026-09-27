@@ -96,7 +96,42 @@
   In this section, the most popular and studied MA are being presented, which are GA,
   SA and GA + SA.
 
-  \subsection*{Genetic Algorithms} \blindtext
+  \subsection*{Genetic Algorithms} Using the idea of principles of the evolution
+  and the process of natural selection was proposed by John Holland with help
+  of his students and colleagues at the University of Michigan (MIT) in the 1975 
+  \cite{holland1975adaptation}. 
+
+  The generations of solutions must follow a process to garantee a global solution,
+  instead of a local solution, thus several operators must be applied to the 
+  population of solutions for each generation, which are:
+
+  \begin{itemize}
+    \item Selection: A probability of selection is applied to the fitness function for
+      each individual, where the member with the best fitness value will be considered
+      as the parents and the worst fitness valuel will be discarded.
+    \item Crossover: It combines different segments of the parents' genes
+      to generate a new offspring, which will seek to achieve a better global solution.
+    \item Mutation: A small random alteration is made to the offspring's genes
+      to increase population diversity, thereby avoiding a potential local solution
+      and aiming to find a global solution through this genetic diversity.
+  \end{itemize}
+
+  Figure \ref{fig:FlowChart_GA} shows a flowchart of GA. It illustrates how
+  starting from an initial population, each individual is evaluated using the fitnes 
+  function to determine its fitness value. Next, the termination condition
+  is checked such as completing a certain number of generations or reaching an optimal score.
+  If the condition is not met, selection, crossover, and mutation operators are applied
+  to generate new populations until the termination condition is satisfied.
+
+  \begin{figure}[tbhp]
+    \centering
+    \includegraphics[width=.8\linewidth]{figures/flowchart_GA.pdf}
+    \caption{Flowchart of a Genetic Algorithm \cite{garg2010evolutionary}}
+    \label{fig:FlowChart_GA}
+  \end{figure}
+
+
+
   \subsection*{Simulated Annealing} \blindtext
   \subsection*{Genetic Algorithm + Simulated Annealing} \blindtext
 
